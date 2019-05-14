@@ -2,7 +2,7 @@
   "$schema": "https://github.com/OfficeDev/microsoft-teams-app-schema/blob/preview/DevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview",
   "version": "1.0",
-  "id": "2bb0ae1f-f1c3-4241-a926-6d2d9a8ab3e8",
+  "id": "300639bf-2c0f-41a7-aa2e-7833664c4c76",
   "packageName": "com.microsoft.teams.samples.v4bot",
   "developer": {
     "name": "Microsoft Corp",
@@ -11,7 +11,7 @@
     "termsOfUseUrl": "https://example.azurewebsites.net/termsofuse"
   },
   "name": {
-    "short": "V4 Sample",
+    "short": "sample card bot",
     "full": "Microsoft Teams V4 Sample Bot"
   },
   "description": {
@@ -25,13 +25,13 @@
   "accentColor": "#abcdef",
   "bots": [
     {
-      "botId": "2bb0ae1f-f1c3-4241-a926-6d2d9a8ab3e8",
+      "botId": "300639bf-2c0f-41a7-aa2e-7833664c4c76",
       "scopes": ["personal", "team"]
     }
   ],
   "composeExtensions": [
     {
-      "botId": "2bb0ae1f-f1c3-4241-a926-6d2d9a8ab3e8",
+      "botId": "300639bf-2c0f-41a7-aa2e-7833664c4c76",
       "commands": [
         {
           "id": "queryCards",
