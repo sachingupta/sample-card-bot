@@ -5,8 +5,8 @@
   "author": "Microsoft Corp",
   "license": "MIT",
   "scripts": {
-    "start": "npm run build:live",
-    "build:live": "nodemon --ignore './data' --exec node --inspect=5566 -r ts-node/register ./src/app.ts"
+    "start": "node --inspect=5566 -r ts-node/register ./src/app.ts",
+    "dev": "nodemon --ignore './data' --exec node --inspect=5566 -r ts-node/register ./src/app.ts"
   },
   "dependencies": {
     "botbuilder-teams": "^4.3.0-beta1",
