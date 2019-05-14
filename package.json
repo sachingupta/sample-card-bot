@@ -5,8 +5,9 @@
   "author": "Microsoft Corp",
   "license": "MIT",
   "scripts": {
-    "start": "node --inspect=5566 -r ts-node/register ./src/app.ts",
-    "dev": "nodemon --ignore './data' --exec node --inspect=5566 -r ts-node/register ./src/app.ts"
+    "start": "node ./lib/app.js",
+    "dev": "nodemon --ignore './data' --exec node --inspect=5566 -r ts-node/register ./src/app.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "botbuilder-teams": "^4.3.0-beta1",

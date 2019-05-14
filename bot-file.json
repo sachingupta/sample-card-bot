@@ -4,9 +4,9 @@
         {
             "type": "endpoint",
             "name": "development",
-            "endpoint": "http://localhost:3978/api/messages",
-            "appId": "2bb0ae1f-f1c3-4241-a926-6d2d9a8ab3e8",
-            "appPassword": "jgqFB780;#bkxwPVSJE47$}",
+            "endpoint": "https://saching-sample-card-bot.azurewebsites.net/api/messages",
+            "appId": "300639bf-2c0f-41a7-aa2e-7833664c4c76",
+            "appPassword": "sbaqxEI2917!%mzCAYMN5;^",
             "id": "1"
         }
     ],
