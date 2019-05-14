@@ -1,6 +1,9 @@
 {
   "name": "botbuilder-teams-js-messaging-ext-bot",
   "version": "0.0.1",
+  "engines": {
+    "node": ">8.0.0"
+  },
   "description": "Microsoft Teams Sample Bot for BotBuilder V4",
   "author": "Microsoft Corp",
   "license": "MIT",
