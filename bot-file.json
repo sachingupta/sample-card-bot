@@ -1,0 +1,15 @@
+{
+    "name": "echobot-with-counter",
+    "services": [
+        {
+            "type": "endpoint",
+            "name": "development",
+            "endpoint": "http://localhost:3978/api/messages",
+            "appId": "2bb0ae1f-f1c3-4241-a926-6d2d9a8ab3e8",
+            "appPassword": "jgqFB780;#bkxwPVSJE47$}",
+            "id": "1"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0"
+}
