@@ -66,7 +66,7 @@ export class TeamsBot {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
 
                 let preview = CardFactory.thumbnailCard('Search Item Card', 'This is to show the search result');
-                let heroCard = CardFactory.heroCard('Result Card', '<pre>This card mocks the CE results</pre>');
+                let heroCard = CardFactory.adaptiveCard(this.getAdaptiveCard());
                 let response: R = {
                     status: 200,
                     body: {
@@ -213,7 +213,7 @@ export class TeamsBot {
         };
     }
 
-    private async sendCards (ctx: TurnContext) {
+    private getAdaptiveCard() {
         let adaptiveCard = teams.TeamsFactory.adaptiveCard({
             version: '1.0.0',
             type: 'AdaptiveCard',
@@ -248,6 +248,11 @@ export class TeamsBot {
                 })
             ]
         });
+        return adaptiveCard;
+    }
+
+    private async sendCards (ctx: TurnContext) {
+        let adaptiveCard = this.getAdaptiveCard();
 
         let taskModuleCard1 = teams.TeamsFactory.adaptiveCard({
             version: '1.0.0',
