@@ -66,7 +66,7 @@ export class TeamsBot {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
 
                 let preview = CardFactory.thumbnailCard('Search Item Card', 'This is to show the search result');
-                let heroCard = CardFactory.adaptiveCard(this.getAdaptiveCard());
+                let heroCard = this.getAdaptiveCard();
                 let response: R = {
                     status: 200,
                     body: {
