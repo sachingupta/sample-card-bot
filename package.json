@@ -10,7 +10,6 @@
   "scripts": {
     "start": "node ./lib/app.js",
     "dev": "nodemon --ignore './data' --exec node --inspect=5566 -r ts-node/register ./src/app.ts",
-    "echo:dev": "NODE_ENV=echo nodemon --ignore './data' --exec node --inspect=5566 -r ts-node/register ./src/app.ts",
     "build": "tsc"
   },
   "dependencies": {
