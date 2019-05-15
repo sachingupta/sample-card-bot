@@ -29,8 +29,7 @@
 Install some sort of tunnelling service. These instructions assume you are using ngrok: https://ngrok.com/
 
 * (Only needed if wanting to run in the Bot Emulator)<br>
-Install the Bot Emulator - click on "Bot Framework Emulator (Mac and Windows)": https://docs.botframework.com/en-us/downloads/#navtitle  
-    * NOTE: make sure to pin the emulator to your task bar because it can sometimes be difficult to find again
+Install the Bot Framework V4 Emulator for your platform from the [GitHub releases](https://github.com/Microsoft/BotFramework-Emulator/releases/latest) page.
 
 ## Steps to see the bot running in the Bot Emulator<br>
 NOTE: Teams does not work nor render things exactly like the Bot Emulator - this method is meant as just a slightly easier way to see the project's bot running

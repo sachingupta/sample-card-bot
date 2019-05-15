@@ -28,7 +28,7 @@ export class TeamsBot {
      * 
      * @param {TurnContext} context on turn context object.
      */
-    async onTurn(turnContext: TurnContext) {
+    async run(turnContext: TurnContext) {
         await this.activityProc.processIncomingActivity(turnContext);
     }
 

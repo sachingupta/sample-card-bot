@@ -14,6 +14,8 @@ import { BotConfiguration, IEndpointService } from 'botframework-config';
 
 import { TeamsBot } from './bot';
 
+import { EchoBot } from './echoBot';
+
 // Read botFilePath and botFileSecret from .env file
 // Note: Ensure you have a .env file and include botFilePath and botFileSecret.
 const ENV_FILE = path.join(__dirname, '..', '.env');
@@ -93,8 +95,8 @@ let conversationState = new teams.TeamSpecificConversationState(memoryStorage);
 // });
 // conversationState = new ConversationState(blobStorage);
 
-// Create the TeamsBot.
-const bot = new TeamsBot(conversationState);
+// Create the TeamsBot or echo bot in local.
+const bot = new EchoBot(); //new TeamsBot(conversationState);
 
 // Create HTTP server
 let server = restify.createServer();
@@ -108,8 +110,8 @@ server.listen(process.env.port || process.env.PORT || 3978, function() {
 server.use(require('restify-plugins').bodyParser());
 server.post('/api/messages', (req, res) => {
     adapter.processActivity(req, res, async (turnContext) => {
-        // Call bot.onTurn() to handle all incoming messages.
-        await bot.onTurn(turnContext);
+        // Call bot.run() to handle all incoming messages.
+        await bot.run(turnContext);
     });
 });
 
