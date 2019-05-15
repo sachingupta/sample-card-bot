@@ -31,9 +31,9 @@ Install some sort of tunnelling service. These instructions assume you are using
 * (Only needed if wanting to run in the Bot Emulator)<br>
 Install the Bot Framework V4 Emulator for your platform from the [GitHub releases](https://github.com/Microsoft/BotFramework-Emulator/releases/latest) page.
 
-## Steps to see the bot running in the Bot Emulator<br>
+## Steps to see the bot running in the Bot Emulator<br> 
 NOTE: Teams does not work nor render things exactly like the Bot Emulator - this method is meant as just a slightly easier way to see the project's bot running
-
+[Hack]: set botType=echoBot in .env file to run it as echoBot locally
 * Download the Bot Framework V4 Emulator for your platform from the [GitHub releases](https://github.com/Microsoft/BotFramework-Emulator/releases/latest) page.
 
 * Once the code is running (bar at the bottom will be orange), connect with the Bot Emulator to the default endpoint, "http://localhost:3978/api/messages", leaving "Microsoft App ID" and "Microsoft App Password" blank

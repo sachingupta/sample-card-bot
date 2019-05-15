@@ -96,7 +96,8 @@ let conversationState = new teams.TeamSpecificConversationState(memoryStorage);
 // conversationState = new ConversationState(blobStorage);
 
 // Create the TeamsBot or echo bot in local.
-const bot = new EchoBot(); //new TeamsBot(conversationState);
+console.log(process.env.botType);
+const bot = (process.env.botType && process.env.botType == "echoBot") ? new EchoBot() : new TeamsBot(conversationState);
 
 // Create HTTP server
 let server = restify.createServer();
