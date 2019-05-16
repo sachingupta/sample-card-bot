@@ -13,7 +13,7 @@ export declare class TeamsBot {
      *
      * @param {TurnContext} context on turn context object.
      */
-    onTurn(turnContext: TurnContext): Promise<void>;
+    run(turnContext: TurnContext): Promise<void>;
     /**
      *  Set up all activity handlers
      */

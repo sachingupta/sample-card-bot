@@ -4,9 +4,9 @@
         {
             "type": "endpoint",
             "name": "development",
-            "endpoint": "http://localhost:3978/api/messages",
-            "appId": "",
-            "appPassword": "",
+            "endpoint": "https://bot-src.azurewebsites.net/api/messages",
+            "appId": "c1e8b28b-67c9-4993-b22c-23ca07dbe17f",
+            "appPassword": "kpzfIHHNWO00*#^;cpuC325",
             "id": "1"
         }
     ],
