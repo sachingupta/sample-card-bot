@@ -67,7 +67,7 @@ export class TeamsBot {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
 
                 let heroCard = this.getAdaptiveCard();
-                let in_list = data.default;
+                let in_list = (data as any).default;
                 let preview_list = in_list.map((item:any) => {
                     return ({
                         heroCard:heroCard,
