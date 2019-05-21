@@ -65,7 +65,7 @@ export class TeamsBot {
         this.activityProc.invokeActivityHandler = {
             onMessagingExtensionQuery: async (ctx: TurnContext, query: teams.MessagingExtensionQuery) => {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
-
+                console.log("FLAG 1")
                 let heroCard = this.getAdaptiveCard();
                 let in_list = (data as any).default;
                 let preview_list = in_list.map((item:any) => {
@@ -74,6 +74,7 @@ export class TeamsBot {
                         preview: item,
                     })
                 })
+                console.log(preview_list)
                 let response: R = {
                     status: 200,
                     body: {
