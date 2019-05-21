@@ -49,8 +49,8 @@ const endpointConfig = <IEndpointService>botConfig.findServiceByNameOrId(BOT_CON
 // // Create adapter. 
 // See https://aka.ms/about-bot-adapter to learn more about to learn more about bot adapter.
 const botSetting: Partial<BotFrameworkAdapterSettings> = {
-    appId: (endpointConfig && endpointConfig.appId) || process.env.microsoftAppID || "c1e8b28b-67c9-4993-b22c-23ca07dbe17f",
-    appPassword: (endpointConfig && endpointConfig.appPassword) || process.env.microsoftAppPassword || "kpzfIHHNWO00*#^;cpuC325",
+    appId: (endpointConfig && endpointConfig.appId) || process.env.microsoftAppID,
+    appPassword: (endpointConfig && endpointConfig.appPassword) || process.env.microsoftAppPassword,
 };
 
 const adapter = new teams.TeamsAdapter(botSetting);

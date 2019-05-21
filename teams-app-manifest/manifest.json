@@ -2,7 +2,7 @@
   "$schema": "https://github.com/OfficeDev/microsoft-teams-app-schema/blob/preview/DevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview",
   "version": "1.0",
-  "id": "c1e8b28b-67c9-4993-b22c-23ca07dbe17f",
+  "id": "300639bf-2c0f-41a7-aa2e-7833664c4c76",
   "packageName": "com.microsoft.teams.samples.v4bot",
   "developer": {
     "name": "Microsoft Corp",
@@ -25,13 +25,13 @@
   "accentColor": "#abcdef",
   "bots": [
     {
-      "botId": "c1e8b28b-67c9-4993-b22c-23ca07dbe17f",
+      "botId": "300639bf-2c0f-41a7-aa2e-7833664c4c76",
       "scopes": ["personal", "team"]
     }
   ],
   "composeExtensions": [
     {
-      "botId": "c1e8b28b-67c9-4993-b22c-23ca07dbe17f",
+      "botId": "300639bf-2c0f-41a7-aa2e-7833664c4c76",
       "commands": [
         {
           "id": "queryCards",
