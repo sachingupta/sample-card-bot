@@ -65,7 +65,9 @@ export class TeamsBot {
             onMessagingExtensionQuery: async (ctx: TurnContext, query: teams.MessagingExtensionQuery) => {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
 
-                let preview = CardFactory.thumbnailCard('Search Item Card', 'This is to show the search result');
+                let preview = CardFactory.thumbnailCard('VENIAM', "Qui et deserunt minim qui in.", ["http://placehold.it/32x32"]);
+                let preview2 = CardFactory.thumbnailCard('OCCAECAT', "Voluptate excepteur cupidatat laborum velit.", ["http://placehold.it/32x32"]);
+                let preview3 = CardFactory.thumbnailCard('ALIQUA', "Consequat voluptate elit minim aliquip.", ["http://placehold.it/32x32"]);
                 let heroCard = this.getAdaptiveCard();
                 let response: R = {
                     status: 200,
@@ -74,7 +76,9 @@ export class TeamsBot {
                             type: 'result',
                             attachmentLayout: 'list',
                             attachments: [
-                                { ...heroCard, preview }
+                                { ...heroCard, preview },
+                                { ...heroCard,  preview: preview2 },
+                                { ...heroCard, preview: preview3 }
                             ]
                         }
                     }
