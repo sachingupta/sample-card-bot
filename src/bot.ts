@@ -64,15 +64,33 @@ export class TeamsBot {
         this.activityProc.invokeActivityHandler = {
             onMessagingExtensionQuery: async (ctx: TurnContext, query: teams.MessagingExtensionQuery) => {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
-
+                let searchtext = query.parameters && query.parameters[0] && query.parameters[0].value;
+                let preview_list;
                 let heroCard = this.getAdaptiveCard();
-                
-                let preview_list = data.map((item:any) => {
-                    return ({
-                        ...heroCard,
-                        preview: CardFactory.thumbnailCard(item.title,item.subTitle,[item.heroImageSrc]),
-                    })  
-                })
+                if (searchtext === 'all' || !searchtext) {
+                    preview_list = data.map((item:any) => {
+                        return ({
+                            ...heroCard,
+                            preview: CardFactory.thumbnailCard(item.title,item.subTitle,[item.heroImageSrc]),
+                        })  
+                    })
+                }
+                else {
+                    // Filter based on the query
+                    let queriedItems = [];
+                    data.forEach((item:any) => {
+                        if(item.title.toLowerCase().includes(searchtext.trim().toLowerCase())){
+                            queriedItems.push(item);
+                        }
+                    });
+                    // Make the preview list based on the schema we want
+                    preview_list = queriedItems.map((item:any) => {
+                        return ({
+                            ...heroCard,
+                            preview: CardFactory.thumbnailCard(item.title,item.subTitle,[item.heroImageSrc]),
+                        })  
+                    })
+                }
                 let response: R = {
                     status: 200,
                     body: {
