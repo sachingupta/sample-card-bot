@@ -65,6 +65,7 @@ export class TeamsBot {
             onMessagingExtensionQuery: async (ctx: TurnContext, query: teams.MessagingExtensionQuery) => {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
 
+                let searchtext = query.parameters && query.parameters[0] && query.parameters[0].value;
                 let preview = CardFactory.thumbnailCard('VENIAM', "Qui et deserunt minim qui in.", ["http://placehold.it/32x32"]);
                 let preview2 = CardFactory.thumbnailCard('OCCAECAT', "Voluptate excepteur cupidatat laborum velit.", ["http://placehold.it/32x32"]);
                 let preview3 = CardFactory.thumbnailCard('ALIQUA', JSON.stringify(query), ["http://placehold.it/32x32"]);
