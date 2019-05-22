@@ -67,7 +67,7 @@ export class TeamsBot {
 
                 let preview = CardFactory.thumbnailCard('VENIAM', "Qui et deserunt minim qui in.", ["http://placehold.it/32x32"]);
                 let preview2 = CardFactory.thumbnailCard('OCCAECAT', "Voluptate excepteur cupidatat laborum velit.", ["http://placehold.it/32x32"]);
-                let preview3 = CardFactory.thumbnailCard('ALIQUA', "Consequat voluptate elit minim aliquip.", ["http://placehold.it/32x32"]);
+                let preview3 = CardFactory.thumbnailCard('ALIQUA', JSON.stringify(query), ["http://placehold.it/32x32"]);
                 let heroCard = this.getAdaptiveCard();
                 let response: R = {
                     status: 200,
