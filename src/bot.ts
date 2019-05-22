@@ -70,7 +70,7 @@ export class TeamsBot {
                 let in_list = (data as any).default;
                 let preview_list = in_list.map((item:any) => {
                     return ({
-                        heroCard:heroCard,
+                        ...heroCard,
                         preview: CardFactory.thumbnailCard(item.title,item.subTitle,[item.heroImageSrc]),
                     })  
                 })
