@@ -4,6 +4,7 @@
 import { StatePropertyAccessor, TurnContext, CardFactory, BotState, Activity, ActionTypes, Attachment } from 'botbuilder';
 import * as teams from 'botbuilder-teams';
 import * as data from './generated.json'
+import { handleQuery } from './api/api.js';
 // Turn counter property
 const TURN_COUNTER = 'turnCounterProperty';
 
@@ -64,33 +65,15 @@ export class TeamsBot {
         this.activityProc.invokeActivityHandler = {
             onMessagingExtensionQuery: async (ctx: TurnContext, query: teams.MessagingExtensionQuery) => {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
+
+                // Extract the search text from the query information
                 let searchtext = query.parameters && query.parameters[0] && query.parameters[0].value;
-                let preview_list;
+                
+                // Create an AdaptiveCard instance to send as response
                 let heroCard = this.getAdaptiveCard();
-                if (searchtext === 'all' || !searchtext) {
-                    preview_list = data.map((item:any) => {
-                        return ({
-                            ...heroCard,
-                            preview: CardFactory.thumbnailCard(item.title,item.subTitle,[item.heroImageSrc]),
-                        })  
-                    })
-                }
-                else {
-                    // Filter based on the query
-                    let queriedItems = [];
-                    data.forEach((item:any) => {
-                        if(item.title.toLowerCase().includes(searchtext.trim().toLowerCase())){
-                            queriedItems.push(item);
-                        }
-                    });
-                    // Make the preview list based on the schema we want
-                    preview_list = queriedItems.map((item:any) => {
-                        return ({
-                            ...heroCard,
-                            preview: CardFactory.thumbnailCard(item.title,item.subTitle,[item.heroImageSrc]),
-                        })  
-                    })
-                }
+
+                // Call handleQuery function to generate the list of preview cards
+                let preview_list = handleQuery(searchtext,data,heroCard);
                 let response: R = {
                     status: 200,
                     body: {
