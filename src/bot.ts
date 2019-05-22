@@ -71,10 +71,9 @@ export class TeamsBot {
                 let preview_list = in_list.map((item:any) => {
                     return ({
                         heroCard:heroCard,
-                        preview: item,
-                    })
+                        preview: CardFactory.thumbnailCard(item.title,item.subTitle,[item.heroImageSrc]),
+                    })  
                 })
-                console.log(preview_list)
                 let response: R = {
                     status: 200,
                     body: {
