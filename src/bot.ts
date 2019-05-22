@@ -3,7 +3,7 @@
 
 import { StatePropertyAccessor, TurnContext, CardFactory, BotState, Activity, ActionTypes, Attachment } from 'botbuilder';
 import * as teams from 'botbuilder-teams';
-
+import * as data from './generated.json'
 // Turn counter property
 const TURN_COUNTER = 'turnCounterProperty';
 
@@ -65,21 +65,21 @@ export class TeamsBot {
             onMessagingExtensionQuery: async (ctx: TurnContext, query: teams.MessagingExtensionQuery) => {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
 
-                let preview = CardFactory.thumbnailCard('VENIAM', "Qui et deserunt minim qui in.", ["http://placehold.it/32x32"]);
-                let preview2 = CardFactory.thumbnailCard('OCCAECAT', "Voluptate excepteur cupidatat laborum velit.", ["http://placehold.it/32x32"]);
-                let preview3 = CardFactory.thumbnailCard('ALIQUA', JSON.stringify(query), ["http://placehold.it/32x32"]);
                 let heroCard = this.getAdaptiveCard();
+                
+                let preview_list = data.map((item:any) => {
+                    return ({
+                        ...heroCard,
+                        preview: CardFactory.thumbnailCard(item.title,item.subTitle,[item.heroImageSrc]),
+                    })  
+                })
                 let response: R = {
                     status: 200,
                     body: {
                         composeExtension: {
                             type: 'result',
                             attachmentLayout: 'list',
-                            attachments: [
-                                { ...heroCard, preview },
-                                { ...heroCard,  preview: preview2 },
-                                { ...heroCard, preview: preview3 }
-                            ]
+                            attachments: preview_list
                         }
                     }
                 };
