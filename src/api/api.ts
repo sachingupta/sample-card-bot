@@ -1,9 +1,10 @@
 import { CardFactory } from 'botbuilder'
+import * as data from './generated.json'
 
 // Function to handle query fomr bot and output a list of desired items as adaptive cards
-export const handleQuery = (searchtext:string, data:Array<any>, heroCard:any) => {
+export const handleQuery = (searchtext:string, heroCard:any) => {
     // Writing 'all' in the search bar will display all cards stored
-    if (searchtext === 'all' || !searchtext) {
+    if (!searchtext || searchtext.toLowerCase() === 'all') {
         return (createPreviewList(data, heroCard))
     }
     // Writing anything else in the search bar will filter the displayed cards

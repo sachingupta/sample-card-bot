@@ -3,7 +3,6 @@
 
 import { StatePropertyAccessor, TurnContext, CardFactory, BotState, Activity, ActionTypes, Attachment } from 'botbuilder';
 import * as teams from 'botbuilder-teams';
-import * as data from './generated.json'
 import { handleQuery } from './api/api.js';
 // Turn counter property
 const TURN_COUNTER = 'turnCounterProperty';
@@ -73,7 +72,7 @@ export class TeamsBot {
                 let heroCard = this.getAdaptiveCard();
 
                 // Call handleQuery function to generate the list of preview cards
-                let preview_list = handleQuery(searchtext,data,heroCard);
+                let preview_list = handleQuery(searchtext, heroCard);
                 let response: R = {
                     status: 200,
                     body: {
