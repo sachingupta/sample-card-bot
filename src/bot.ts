@@ -3,7 +3,8 @@
 
 import { StatePropertyAccessor, TurnContext, CardFactory, BotState, Activity, ActionTypes, Attachment } from 'botbuilder';
 import * as teams from 'botbuilder-teams';
-
+import * as data from './generated.json'
+import { handleQuery } from './api/api.js';
 // Turn counter property
 const TURN_COUNTER = 'turnCounterProperty';
 
@@ -65,22 +66,21 @@ export class TeamsBot {
             onMessagingExtensionQuery: async (ctx: TurnContext, query: teams.MessagingExtensionQuery) => {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
 
+                // Extract the search text from the query information
                 let searchtext = query.parameters && query.parameters[0] && query.parameters[0].value;
-                let preview = CardFactory.thumbnailCard('VENIAM', "Qui et deserunt minim qui in.", ["http://placehold.it/32x32"]);
-                let preview2 = CardFactory.thumbnailCard('OCCAECAT', "Voluptate excepteur cupidatat laborum velit.", ["http://placehold.it/32x32"]);
-                let preview3 = CardFactory.thumbnailCard('ALIQUA', JSON.stringify(query), ["http://placehold.it/32x32"]);
+                
+                // Create an AdaptiveCard instance to send as response
                 let heroCard = this.getAdaptiveCard();
+
+                // Call handleQuery function to generate the list of preview cards
+                let preview_list = handleQuery(searchtext,data,heroCard);
                 let response: R = {
                     status: 200,
                     body: {
                         composeExtension: {
                             type: 'result',
                             attachmentLayout: 'list',
-                            attachments: [
-                                { ...heroCard, preview },
-                                { ...heroCard,  preview: preview2 },
-                                { ...heroCard, preview: preview3 }
-                            ]
+                            attachments: preview_list
                         }
                     }
                 };
