@@ -18,8 +18,5 @@ export declare class TeamsBot {
      *  Set up all activity handlers
      */
     private setupHandlers;
-    private getAdaptiveCard;
     private sendCards;
-    private taskModuleResponse;
-    private taskModuleResponseCard;
 }

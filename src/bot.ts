@@ -3,7 +3,7 @@
 
 import { StatePropertyAccessor, TurnContext, CardFactory, BotState, Activity, ActionTypes, Attachment } from 'botbuilder';
 import * as teams from 'botbuilder-teams';
-import { handleQuery } from './api/api.js';
+import { handleQuery, getAdaptiveCard, taskModuleResponse, taskModuleResponseCard } from './api/api.js';
 // Turn counter property
 const TURN_COUNTER = 'turnCounterProperty';
 
@@ -69,10 +69,9 @@ export class TeamsBot {
                 let searchtext = query.parameters && query.parameters[0] && query.parameters[0].value;
                 
                 // Create an AdaptiveCard instance to send as response
-                let heroCard = this.getAdaptiveCard();
 
                 // Call handleQuery function to generate the list of preview cards
-                let preview_list = handleQuery(searchtext, heroCard);
+                let preview_list = handleQuery(searchtext);
                 let response: R = {
                     status: 200,
                     body: {
@@ -92,7 +91,7 @@ export class TeamsBot {
                 return Promise.resolve(<R> {
                     status: 200,
                     body: {
-                        task: this.taskModuleResponse(query, false)
+                        task: taskModuleResponse(query, false)
                     }
                 });
             },
@@ -123,7 +122,7 @@ export class TeamsBot {
                                 type: 'botMessagePreview',
                                 activityPreview: <Activity> {
                                     attachments: [
-                                        this.taskModuleResponseCard(query)
+                                        taskModuleResponseCard(query)
                                     ]
                                 }
                             }
@@ -159,7 +158,7 @@ export class TeamsBot {
                     }
                 } else {
                     body = {
-                        task: this.taskModuleResponse(query, false)
+                        task: taskModuleResponse(query, false)
                     }
                 }
                 return Promise.resolve({ status: 200, body });
@@ -170,7 +169,7 @@ export class TeamsBot {
                 const response: R = {
                     status: 200,
                     body: {
-                        task: this.taskModuleResponse(query, false)
+                        task: taskModuleResponse(query, false)
                     }
                 };
                 return Promise.resolve(response);
@@ -182,7 +181,7 @@ export class TeamsBot {
                 const response: R = {
                     status: 200,
                     body: {
-                        task: this.taskModuleResponse(query, !!data.done)
+                        task: taskModuleResponse(query, !!data.done)
                     }
                 };
                 return Promise.resolve(response);
@@ -217,46 +216,8 @@ export class TeamsBot {
         };
     }
 
-    private getAdaptiveCard() {
-        let adaptiveCard = teams.TeamsFactory.adaptiveCard({
-            version: '1.0.0',
-            type: 'AdaptiveCard',
-            body: [{
-                type: 'TextBlock',
-                text: 'Bot Builder actions',
-                size: 'large',
-                weight: 'bolder'
-            }],
-            actions: [
-                teams.TeamsFactory.adaptiveCardAction({
-                    type: ActionTypes.ImBack,
-                    title: 'imBack',
-                    value: 'text'
-                }),
-                teams.TeamsFactory.adaptiveCardAction({
-                    type: ActionTypes.MessageBack,
-                    title: 'message back',
-                    value: { key: 'value' },
-                    text: 'text received by bots',
-                    displayText: 'text display to users',
-                }),
-                teams.TeamsFactory.adaptiveCardAction({
-                    type: 'invoke',
-                    title: 'invoke',
-                    value: { key: 'value' }
-                }),
-                teams.TeamsFactory.adaptiveCardAction({
-                    type: ActionTypes.Signin,
-                    title: 'signin',
-                    value: process.env.host + '/auth/teams-test-auth-state'
-                })
-            ]
-        });
-        return adaptiveCard;
-    }
-
     private async sendCards (ctx: TurnContext) {
-        let adaptiveCard = this.getAdaptiveCard();
+        let adaptiveCard = getAdaptiveCard();
 
         let taskModuleCard1 = teams.TeamsFactory.adaptiveCard({
             version: '1.0.0',
@@ -285,70 +246,5 @@ export class TeamsBot {
             { attachments: [taskModuleCard1] },
             { attachments: [taskModuleCard2] }
         ]);
-    }
-
-    private taskModuleResponse (query: any, done: boolean): teams.TaskModuleResponseBase {
-        if (done) {
-            return <teams.TaskModuleMessageResponse> {
-                type: 'message',
-                value: 'Thanks for your inputs!'
-            }
-        } else {
-            return <teams.TaskModuleContinueResponse> {
-                type: 'continue',
-                value: {
-                    title: 'More Page',
-                    card: this.taskModuleResponseCard(query, (query.data && query.data.userText) || undefined)
-                }
-            };
-        }
-    }
-
-    private taskModuleResponseCard (data: any, textValue?: string): Attachment {
-        return teams.TeamsFactory.adaptiveCard({
-            version: '1.0.0',
-            type: 'AdaptiveCard',
-            body: <any> [
-                {
-                    type: 'TextBlock',
-                    text: `Your request:`,
-                    size: 'large',
-                    weight: 'bolder'
-                },
-                {
-                    type: 'Container',
-                    style: 'emphasis',
-                    items: [
-                      {
-                        type: 'TextBlock',
-                        text: JSON.stringify(data),
-                        wrap: true
-                      }
-                    ]
-                },
-                {
-                    type: 'Input.Text',
-                    id: 'userText',
-                    placeholder: 'Type text here...',
-                    value: textValue
-                }
-            ],
-            actions: [
-                <teams.IAdaptiveCardAction> {
-                    type: 'Action.Submit',
-                    title: 'Next',
-                    data: {
-                        done: false
-                    }
-                },
-                <teams.IAdaptiveCardAction> {
-                    type: 'Action.Submit',
-                    title: 'Submit',
-                    data: {
-                        done: true
-                    }
-                }
-            ]
-        })
-    }
+    } 
 }
