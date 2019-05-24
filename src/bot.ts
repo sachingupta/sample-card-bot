@@ -71,7 +71,7 @@ export class TeamsBot {
                     if(query.parameters[0].name === 'initialRun') {
                         searchtext = '';
                     }
-                    if(query.parameters[0].value) {
+                    else if(query.parameters[0].value) {
                         searchtext = query.parameters[0].value;
                     }
                 }
