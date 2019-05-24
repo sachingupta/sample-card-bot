@@ -66,7 +66,15 @@ export class TeamsBot {
                 type R = teams.InvokeResponseTypeOf<'onMessagingExtensionQuery'>;
 
                 // Extract the search text from the query information
-                let searchtext = query.parameters && query.parameters[0] && query.parameters[0].value;
+                let searchtext = '';
+                if( query.parameters && query.parameters[0]) {
+                    if(query.parameters[0].name === 'initialRun') {
+                        searchtext = '';
+                    }
+                    if(query.parameters[0].value) {
+                        searchtext = query.parameters[0].value;
+                    }
+                }
                 
                 // Create an AdaptiveCard instance to send as response
 
