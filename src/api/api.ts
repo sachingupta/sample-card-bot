@@ -4,7 +4,7 @@ import * as teams from 'botbuilder-teams';
 import { adaptiveCardBody } from './adaptivecard';
 
 // Function to handle query fomr bot and output a list of desired items as adaptive cards
-export const handleQuery = (searchtext:string) => {
+export const handleQuery = (searchtext: string) => {
     const heroCard = getCustomAdaptiveCard(adaptiveCardBody);
     // Writing 'all' in the search bar will display all cards stored
     if (!searchtext || searchtext.toLowerCase() === 'all') {
@@ -13,21 +13,21 @@ export const handleQuery = (searchtext:string) => {
     // Writing anything else in the search bar will filter the displayed cards
     else {
         let queriedItems = [];
-        data.forEach((item:any) => {
-            if(item.title.toLowerCase().includes(searchtext.trim().toLowerCase())){
+        data.forEach((item: any) => {
+            if (item.title.toLowerCase().includes(searchtext.trim().toLowerCase())) {
                 queriedItems.push(item);
             }
         })
         return (createPreviewList(queriedItems, heroCard))
     }
-} 
+}
 
 // Function to process a list of items into a list of cards for output
-export const createPreviewList = (items:Array<any>, heroCard:any) => {
-    let out = items.map((item:any) => {
+export const createPreviewList = (items: Array<any>, heroCard: any) => {
+    let out = items.map((item: any) => {
         return ({
             ...heroCard,
-            preview: CardFactory.thumbnailCard(item.title, item.subTitle,[item.heroImageSrc]),
+            preview: CardFactory.thumbnailCard(item.title, item.subTitle, [item.heroImageSrc]),
         })
     })
     return out;
@@ -56,11 +56,11 @@ export const getCustomAdaptiveCard = (body: string) => {
                 title: 'invoke',
                 value: { key: 'value' }
             }),
-            teams.TeamsFactory.adaptiveCardAction({
-                type: ActionTypes.OpenUrl,
-                title: 'JSON Tab',
-                value: 'https://teams.microsoft.com/l/task/300639bf-2c0f-41a7-aa2e-7833664c4c76?&title=First%20Page&url=https%3A%2F%2Fteams-json-tab.azurewebsites.net%2F%3Ftheme%3D%257Btheme%257D%26frameContext%3Dcontent'
-            })
+            {
+                "type": "Action.OpenUrl",
+                "title": "JSON Tab",
+                "url": 'https://teams.microsoft.com/l/task/300639bf-2c0f-41a7-aa2e-7833664c4c76?&title=First%20Page&url=https%3A%2F%2Fteams-json-tab.azurewebsites.net%2F%3Ftheme%3D%257Btheme%257D%26frameContext%3Dcontent'
+            } as any
         ]
     });
     return adaptiveCard;
@@ -106,12 +106,12 @@ export const getAdaptiveCard = () => {
 
 export const taskModuleResponse = (query: any, done: boolean): teams.TaskModuleResponseBase => {
     if (done) {
-        return <teams.TaskModuleMessageResponse> {
+        return <teams.TaskModuleMessageResponse>{
             type: 'message',
             value: 'Thanks for your inputs!'
         }
     } else {
-        return <teams.TaskModuleContinueResponse> {
+        return <teams.TaskModuleContinueResponse>{
             type: 'continue',
             value: {
                 title: 'More Page',
@@ -125,7 +125,7 @@ export const taskModuleResponseCard = (data: any, textValue?: string): Attachmen
     return teams.TeamsFactory.adaptiveCard({
         version: '1.0.0',
         type: 'AdaptiveCard',
-        body: <any> [
+        body: <any>[
             {
                 type: 'TextBlock',
                 text: `Your request:`,
@@ -136,11 +136,11 @@ export const taskModuleResponseCard = (data: any, textValue?: string): Attachmen
                 type: 'Container',
                 style: 'emphasis',
                 items: [
-                  {
-                    type: 'TextBlock',
-                    text: JSON.stringify(data),
-                    wrap: true
-                  }
+                    {
+                        type: 'TextBlock',
+                        text: JSON.stringify(data),
+                        wrap: true
+                    }
                 ]
             },
             {
@@ -151,14 +151,14 @@ export const taskModuleResponseCard = (data: any, textValue?: string): Attachmen
             }
         ],
         actions: [
-            <teams.IAdaptiveCardAction> {
+            <teams.IAdaptiveCardAction>{
                 type: 'Action.Submit',
                 title: 'Next',
                 data: {
                     done: false
                 }
             },
-            <teams.IAdaptiveCardAction> {
+            <teams.IAdaptiveCardAction>{
                 type: 'Action.Submit',
                 title: 'Submit',
                 data: {
