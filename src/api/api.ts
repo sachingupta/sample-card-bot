@@ -57,9 +57,9 @@ export const getCustomAdaptiveCard = (body: string) => {
                 value: { key: 'value' }
             }),
             teams.TeamsFactory.adaptiveCardAction({
-                type: ActionTypes.Signin,
-                title: 'signin',
-                value: process.env.host + '/auth/teams-test-auth-state'
+                type: ActionTypes.OpenUrl,
+                title: 'JSON Tab',
+                value: 'https://teams.microsoft.com/l/task/300639bf-2c0f-41a7-aa2e-7833664c4c76?&title=First%20Page&url=https%3A%2F%2Fteams-json-tab.azurewebsites.net%2F%3Ftheme%3D%257Btheme%257D%26frameContext%3Dcontent'
             })
         ]
     });
