@@ -31,7 +31,7 @@ export const createPreviewList = (items: Array<IPatient>) => {
         return ({
             ...heroCard,
             contentType: 'AdaptiveCard',
-            preview: CardFactory.thumbnailCard(`${item.firstName} ${item.id}`, item.diagnosis, [`https://robohash.org/${item.firstName}.png?set=set5`]),
+            preview: CardFactory.thumbnailCard(`${item.firstName} ${item.lastName}`, item.diagnosis, [`https://robohash.org/${item.firstName}.png?set=set5`]),
         })
     })
     return out;
