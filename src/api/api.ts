@@ -1,43 +1,38 @@
 import { CardFactory, ActionTypes, Attachment } from 'botbuilder'
-import * as data from './generated.json'
+import * as data from './MOCK_DATA.json'
 import * as teams from 'botbuilder-teams';
-import { adaptiveCardBody } from './adaptivecard';
+import { adaptiveCardBody, IPatient, createAdaptiveCard } from './adaptivecard';
 
 // Function to handle query fomr bot and output a list of desired items as adaptive cards
 export const handleQuery = (searchtext: string) => {
-    const heroCard1 = getCustomAdaptiveCard(adaptiveCardBody);
-    const heroCard2 = getCustomAdaptiveCard2(adaptiveCardBody);
     // Writing 'all' in the search bar will display all cards stored
     if (!searchtext || searchtext.toLowerCase() === 'all') {
-        return (createPreviewList(data, heroCard1, heroCard2))
+        return (createPreviewList(data))
     }
     // Writing anything else in the search bar will filter the displayed cards
     else {
         let queriedItems = [];
-        data.forEach((item: any) => {
-            if (item.title.toLowerCase().includes(searchtext.trim().toLowerCase())) {
+        data.forEach((item: IPatient) => {
+            if (
+                item.firstName.toLowerCase().includes(searchtext.trim().toLowerCase()) || 
+                item.lastName.toLowerCase().includes(searchtext.trim().toLowerCase())
+                ) {
                 queriedItems.push(item);
             }
         })
-        return (createPreviewList(queriedItems, heroCard1, heroCard2))
+        return (createPreviewList(queriedItems))
     }
 }
 
 // Function to process a list of items into a list of cards for output
-export const createPreviewList = (items: Array<any>, heroCard: any, heroCard2: any) => {
-    let out = items.map((item: any, index: number) => {
-        if (index % 2) {
-            return ({
-                ...heroCard,
-                preview: CardFactory.thumbnailCard(item.title, item.subTitle, [item.heroImageSrc]),
-            })
-        }
-        else {
-            return ({
-                ...heroCard2,
-                preview: CardFactory.thumbnailCard(item.title, item.subTitle, [item.heroImageSrc]),
-            })
-        }
+export const createPreviewList = (items: Array<IPatient>) => {
+    let out = items.map((item: IPatient, index: number) => {
+        const heroCard = createAdaptiveCard(item)
+        return ({
+            ...heroCard,
+            contentType: 'AdaptiveCard',
+            preview: CardFactory.thumbnailCard(`${item.firstName} ${item.id}`, item.diagnosis, [`https://robohash.org/${item.firstName}.png?set=set5`]),
+        })
     })
     return out;
 }

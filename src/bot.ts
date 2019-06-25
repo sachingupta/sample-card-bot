@@ -4,6 +4,7 @@
 import { StatePropertyAccessor, TurnContext, CardFactory, BotState, Activity, ActionTypes, Attachment } from 'botbuilder';
 import * as teams from 'botbuilder-teams';
 import { handleQuery, getAdaptiveCard, taskModuleResponse, taskModuleResponseCard } from './api/api.js';
+import * as unirest from 'unirest';
 // Turn counter property
 const TURN_COUNTER = 'turnCounterProperty';
 
