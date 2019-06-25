@@ -27,10 +27,9 @@ export const handleQuery = (searchtext: string) => {
 // Function to process a list of items into a list of cards for output
 export const createPreviewList = (items: Array<IPatient>) => {
     let out = items.map((item: IPatient, index: number) => {
-        const heroCard = createAdaptiveCard(item)
+        const heroCard = getCustomAdaptiveCard(adaptiveCardBody);
         return ({
-            content: heroCard,
-            contentType: 'AdaptiveCard',
+            ...heroCard,
             preview: CardFactory.thumbnailCard(`${item.firstName} ${item.lastName}`, item.diagnosis, [`https://robohash.org/${item.firstName}.png?set=set5`]),
         })
     })
