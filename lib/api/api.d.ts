@@ -1,7 +1,148 @@
 import { Attachment } from 'botbuilder';
 import * as teams from 'botbuilder-teams';
-export declare const handleQuery: (searchtext: string) => any[];
-export declare const createPreviewList: (items: any[], heroCard: any, heroCard2: any) => any[];
+import { IPatient } from './adaptivecard';
+export declare const handleQuery: (searchtext: string) => {
+    contentType: string;
+    preview: Attachment;
+    "type": string;
+    "body": ({
+        "type": string;
+        "items": ({
+            "type": string;
+            "size": string;
+            "weight": string;
+            "text": string;
+            "columns"?: undefined;
+        } | {
+            "type": string;
+            "columns": ({
+                "type": string;
+                "items": {
+                    "type": string;
+                    "style": string;
+                    "url": string;
+                    "size": string;
+                }[];
+                "width": string;
+            } | {
+                "type": string;
+                "items": ({
+                    "type": string;
+                    "weight": string;
+                    "text": string;
+                    "wrap": boolean;
+                    "spacing"?: undefined;
+                    "isSubtle"?: undefined;
+                } | {
+                    "type": string;
+                    "spacing": string;
+                    "text": string;
+                    "isSubtle": boolean;
+                    "wrap": boolean;
+                    "weight"?: undefined;
+                })[];
+                "width": string;
+            })[];
+            "size"?: undefined;
+            "weight"?: undefined;
+            "text"?: undefined;
+        })[];
+    } | {
+        "type": string;
+        "items": ({
+            "type": string;
+            "text": string;
+            "wrap": boolean;
+            "facts"?: undefined;
+        } | {
+            "type": string;
+            "facts": {
+                "title": string;
+                "value": string;
+            }[];
+            "text"?: undefined;
+            "wrap"?: undefined;
+        })[];
+    })[];
+    "actions": {
+        "type": string;
+        "title": string;
+        "url": string;
+    }[];
+    "$schema": string;
+    "version": string;
+}[];
+export declare const createPreviewList: (items: IPatient[]) => {
+    contentType: string;
+    preview: Attachment;
+    "type": string;
+    "body": ({
+        "type": string;
+        "items": ({
+            "type": string;
+            "size": string;
+            "weight": string;
+            "text": string;
+            "columns"?: undefined;
+        } | {
+            "type": string;
+            "columns": ({
+                "type": string;
+                "items": {
+                    "type": string;
+                    "style": string;
+                    "url": string;
+                    "size": string;
+                }[];
+                "width": string;
+            } | {
+                "type": string;
+                "items": ({
+                    "type": string;
+                    "weight": string;
+                    "text": string;
+                    "wrap": boolean;
+                    "spacing"?: undefined;
+                    "isSubtle"?: undefined;
+                } | {
+                    "type": string;
+                    "spacing": string;
+                    "text": string;
+                    "isSubtle": boolean;
+                    "wrap": boolean;
+                    "weight"?: undefined;
+                })[];
+                "width": string;
+            })[];
+            "size"?: undefined;
+            "weight"?: undefined;
+            "text"?: undefined;
+        })[];
+    } | {
+        "type": string;
+        "items": ({
+            "type": string;
+            "text": string;
+            "wrap": boolean;
+            "facts"?: undefined;
+        } | {
+            "type": string;
+            "facts": {
+                "title": string;
+                "value": string;
+            }[];
+            "text"?: undefined;
+            "wrap"?: undefined;
+        })[];
+    })[];
+    "actions": {
+        "type": string;
+        "title": string;
+        "url": string;
+    }[];
+    "$schema": string;
+    "version": string;
+}[];
 export declare const getCustomAdaptiveCard: (body: string) => Attachment;
 export declare const getCustomAdaptiveCard2: (body: string) => Attachment;
 export declare const getAdaptiveCard: () => Attachment;
