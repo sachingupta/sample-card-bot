@@ -100,15 +100,43 @@ export interface IPatient {
 export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
   const actions = [
     {
-      "type": "Action.OpenUrl",
-      "title": "Set Appointment",
-      "url": "github.com"
-    },
-    {
-      "type": "Action.OpenUrl",
-      "title": "Clinical History",
-      "url": "http://adaptivecards.io"
-    },
+      "type": "Action.ShowCard",
+      "title": "Assign Doctor",
+      "card": {
+          "type": "AdaptiveCard",
+          "body": [
+              {
+                  "type": "Input.Text",
+                  "id": "doctor"
+              }
+          ],
+          "actions": [
+              {
+                  "type": "Action.Submit",
+                  "title": "OK"
+              }
+          ]
+      }
+  },
+  {
+    "type": "Action.ShowCard",
+    "title": "Set Appointment",
+    "card": {
+        "type": "AdaptiveCard",
+        "body": [
+            {
+                "type": "Input.Date",
+                "id": "appointmentDate"
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "OK"
+            }
+        ]
+    }
+},
   {
       "type": "Action.ShowCard",
       "title": "Update Status",
