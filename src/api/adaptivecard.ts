@@ -108,7 +108,26 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
       "type": "Action.OpenUrl",
       "title": "Clinical History",
       "url": "http://adaptivecards.io"
-    }
+    },
+  {
+      "type": "Action.ShowCard",
+      "title": "Update Status",
+      "card": {
+          "type": "AdaptiveCard",
+          "body": [
+              {
+                  "type": "Input.Text",
+                  "id": "status"
+              }
+          ],
+          "actions": [
+              {
+                  "type": "Action.Submit",
+                  "title": "Submit"
+              }
+          ]
+      }
+  }
   ];
 
   const body = `[
