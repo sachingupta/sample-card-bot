@@ -94,6 +94,8 @@ export interface IPatient {
   bloodType: string;
   admissionDate: string;
   diagnosis: string;
+  status: string;
+  appointmentDate: string;
 }
 
 
@@ -238,6 +240,14 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
             {
               "title": "Blood Type:",
               "value": "${patient.bloodType}"
+            },
+            {
+              "title": "Status:",
+              "value": "${patient.status}"
+            },
+            {
+              "title": "Blood Type:",
+              "value": "${patient.appointmentDate}"
             }
           ]
         }
