@@ -1,7 +1,7 @@
 import { CardFactory, ActionTypes, Attachment } from 'botbuilder'
 import * as data from './MOCK_DATA.json'
 import * as teams from 'botbuilder-teams';
-import { adaptiveCardBody, IPatient, createAdaptiveCard, getCustomAdaptiveCardPatient } from './adaptivecard';
+import { adaptiveCardBody, IPatient, getCustomAdaptiveCardPatient } from './adaptivecard';
 
 // Function to handle query fomr bot and output a list of desired items as adaptive cards
 export const handleQuery = (searchtext: string) => {
