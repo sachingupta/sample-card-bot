@@ -30,7 +30,7 @@ export const createPreviewList = (items: Array<IPatient>) => {
         const heroCard = getCustomAdaptiveCardPatient(item);
         return ({
             ...heroCard,
-            preview: CardFactory.thumbnailCard(`${item.firstName} ${item.lastName}`, item.diagnosis, [`https://robohash.org/${item.firstName}.png?set=set5`]),
+            preview: CardFactory.thumbnailCard(`${item.firstName} ${item.lastName}`, item.diagnosis, [`https://robohash.org/${item.firstName.toLowerCase()}.png?set=set5`]),
         })
     })
     return out;

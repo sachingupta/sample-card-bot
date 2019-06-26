@@ -94,6 +94,8 @@ export interface IPatient {
   bloodType: string;
   admissionDate: string;
   diagnosis: string;
+  status: string;
+  appointmentDate: string;
 }
 
 
@@ -101,13 +103,14 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
   const actions = [
     {
       "type": "Action.ShowCard",
-      "title": "Assign Doctor",
+      "title": "Page Doctor",
       "card": {
           "type": "AdaptiveCard",
           "body": [
               {
                   "type": "Input.Text",
-                  "id": "doctor"
+                  "placeholder": "Add a message",
+                  "id": "doctorPage"
               }
           ],
           "actions": [
@@ -116,7 +119,7 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
                   "done": true
                 },
                   "type": "Action.Submit",
-                  "title": "Submit"
+                  "title": "Send"
               }
           ]
       }
@@ -186,7 +189,7 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
                 {
                   "type": "Image",
                   "style": "Person",
-                  "url": "https://robohash.org/${patient.firstName}.png?set=set5",
+                  "url": "https://robohash.org/${patient.firstName.toLowerCase()}.png?set=set5",
                   "size": "Small"
                 }
               ],
@@ -237,6 +240,14 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
             {
               "title": "Blood Type:",
               "value": "${patient.bloodType}"
+            },
+            {
+              "title": "Status:",
+              "value": "${patient.status}"
+            },
+            {
+              "title": "Blood Type:",
+              "value": "${patient.appointmentDate}"
             }
           ]
         }
