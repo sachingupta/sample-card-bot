@@ -1,3 +1,6 @@
+import { IAdaptiveCard } from "adaptivecards";
+import * as teams from 'botbuilder-teams';
+import { ActionTypes } from "botbuilder";
 export const adaptiveCardBody: string = `[
     {
       "type": "Container",
@@ -93,98 +96,202 @@ export interface IPatient {
   diagnosis: string;
 }
 
+
+export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
+  const actions = [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Set Appointment",
+      "url": "github.com"
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "Clinical History",
+      "url": "http://adaptivecards.io"
+    }
+  ];
+
+  const body = `[
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "Medium",
+          "weight": "Bolder",
+          "text": "Patient #${patient.patientNumber}"
+        },
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "Image",
+                  "style": "Person",
+                  "url": "https://robohash.org/${patient.firstName}.png?set=set5",
+                  "size": "Small"
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "${patient.firstName} ${patient.lastName}",
+                  "wrap": true
+                },
+                {
+                  "type": "TextBlock",
+                  "spacing": "None",
+                  "text": "Admitted {{DATE(${patient.admissionDate}T00:00:00Z,SHORT)}}",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "${patient.diagnosis}",
+          "wrap": true
+        },
+        {
+          "type": "FactSet",
+          "facts": [
+            {
+              "title": "Doctor:",
+              "value": "${patient.doctor}"
+            },
+            {
+              "title": "Emergency Contact:",
+              "value": "${patient.emergencyContact}"
+            },
+            {
+              "title": "Blood Type:",
+              "value": "${patient.bloodType}"
+            }
+          ]
+        }
+      ]
+    }
+  ]`
+
+  let adaptiveCard = teams.TeamsFactory.adaptiveCard({
+      version: '1.0.0',
+      type: 'AdaptiveCard',
+      body: JSON.parse(body),
+      actions: actions as any
+  });
+  return adaptiveCard;
+}
+
+
+
 export const createAdaptiveCard = (patient: IPatient) => {
-  return {
-      "type": "AdaptiveCard",
-      "body": [
+  const out: IAdaptiveCard = {
+    "type": "AdaptiveCard" as "AdaptiveCard",
+    "body": [
+      {
+        "type": "Container",
+        "items": [
           {
-              "type": "Container",
-              "items": [
-                  {
-                      "type": "TextBlock",
-                      "size": "Medium",
-                      "weight": "Bolder",
-                      "text": `Patient #${patient.patientNumber}`
-                  },
-                  {
-                      "type": "ColumnSet",
-                      "columns": [
-                          {
-                              "type": "Column",
-                              "items": [
-                                  {
-                                      "type": "Image",
-                                      "style": "Person",
-                                      "url": `https://robohash.org/${patient.firstName}.png?set=set5`,
-                                      "size": "Small"
-                                  }
-                              ],
-                              "width": "auto"
-                          },
-                          {
-                              "type": "Column",
-                              "items": [
-                                  {
-                                      "type": "TextBlock",
-                                      "weight": "Bolder",
-                                      "text": `${patient.firstName} ${patient.lastName}`,
-                                      "wrap": true
-                                  },
-                                  {
-                                      "type": "TextBlock",
-                                      "spacing": "None",
-                                      "text": `Admitted {{DATE(${patient.admissionDate}T00:00:00Z,SHORT)}}`,
-                                      "isSubtle": true,
-                                      "wrap": true
-                                  }
-                              ],
-                              "width": "stretch"
-                          }
-                      ]
-                  }
-              ]
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": `Patient #${patient.patientNumber}`
           },
           {
-              "type": "Container",
-              "items": [
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "items": [
                   {
-                      "type": "TextBlock",
-                      "text": patient.diagnosis,
-                      "wrap": true
+                    "type": "Image",
+                    "style": "Person",
+                    "url": `https://robohash.org/${patient.firstName}.png?set=set5`,
+                    "size": "Small"
+                  }
+                ],
+                "width": "auto"
+              },
+              {
+                "type": "Column",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "weight": "Bolder",
+                    "text": `${patient.firstName} ${patient.lastName}`,
+                    "wrap": true
                   },
                   {
-                      "type": "FactSet",
-                      "facts": [
-                          {
-                              "title": "Doctor:",
-                              "value": patient.doctor
-                          },
-                          {
-                              "title": "Emergency Contact:",
-                              "value": patient.emergencyContact
-                          },
-                          {
-                              "title": "Blood Type:",
-                              "value": patient.bloodType
-                          }
-                      ]
+                    "type": "TextBlock",
+                    "spacing": "None",
+                    "text": `Admitted {{DATE(${patient.admissionDate}T00:00:00Z,SHORT)}}`,
+                    "isSubtle": true,
+                    "wrap": true
                   }
-              ]
+                ],
+                "width": "stretch"
+              }
+            ]
           }
-      ],
-      "actions": [
+        ]
+      },
+      {
+        "type": "Container",
+        "items": [
           {
-              "type": "Action.OpenUrl",
-              "title": "Set Appointment",
-              "url": "github.com"
+            "type": "TextBlock",
+            "text": patient.diagnosis,
+            "wrap": true
           },
           {
-              "type": "Action.OpenUrl",
-              "title": "Clinical History",
-              "url": "http://adaptivecards.io"
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Doctor:",
+                "value": patient.doctor
+              },
+              {
+                "title": "Emergency Contact:",
+                "value": patient.emergencyContact
+              },
+              {
+                "title": "Blood Type:",
+                "value": patient.bloodType
+              }
+            ]
           }
-      ],
-      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-      "version": "1.0"
-  }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "Action.OpenUrl",
+        "title": "Set Appointment",
+        "url": "github.com"
+      },
+      {
+        "type": "Action.OpenUrl",
+        "title": "Clinical History",
+        "url": "http://adaptivecards.io"
+      }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.0"
+  };
+  return out;
 }

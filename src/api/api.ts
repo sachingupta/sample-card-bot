@@ -1,7 +1,7 @@
 import { CardFactory, ActionTypes, Attachment } from 'botbuilder'
 import * as data from './MOCK_DATA.json'
 import * as teams from 'botbuilder-teams';
-import { adaptiveCardBody, IPatient, createAdaptiveCard } from './adaptivecard';
+import { adaptiveCardBody, IPatient, createAdaptiveCard, getCustomAdaptiveCardPatient } from './adaptivecard';
 
 // Function to handle query fomr bot and output a list of desired items as adaptive cards
 export const handleQuery = (searchtext: string) => {
@@ -27,10 +27,9 @@ export const handleQuery = (searchtext: string) => {
 // Function to process a list of items into a list of cards for output
 export const createPreviewList = (items: Array<IPatient>) => {
     let out = items.map((item: IPatient, index: number) => {
-        const heroCard = createAdaptiveCard(item)
+        const heroCard = getCustomAdaptiveCardPatient(item);
         return ({
-            content: heroCard,
-            contentType: 'AdaptiveCard',
+            ...heroCard,
             preview: CardFactory.thumbnailCard(`${item.firstName} ${item.lastName}`, item.diagnosis, [`https://robohash.org/${item.firstName}.png?set=set5`]),
         })
     })
