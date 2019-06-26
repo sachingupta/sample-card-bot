@@ -246,7 +246,7 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
               "value": "${patient.status}"
             },
             {
-              "title": "Blood Type:",
+              "title": "Appointment Date:",
               "value": "${patient.appointmentDate}"
             }
           ]
