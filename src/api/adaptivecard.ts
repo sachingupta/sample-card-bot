@@ -112,8 +112,11 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
           ],
           "actions": [
               {
+                "data": {
+                  "done": true
+                },
                   "type": "Action.Submit",
-                  "title": "OK"
+                  "title": "Submit"
               }
           ]
       }
@@ -131,8 +134,11 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
         ],
         "actions": [
             {
+              "data": {
+                "done": true
+              },
                 "type": "Action.Submit",
-                "title": "OK"
+                "title": "Submit"
             }
         ]
     }
@@ -150,6 +156,9 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
           ],
           "actions": [
               {
+                "data": {
+                  "done": true
+                },
                   "type": "Action.Submit",
                   "title": "Submit"
               }
