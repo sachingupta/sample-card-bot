@@ -10,5 +10,7 @@ export interface IPatient {
     bloodType: string;
     admissionDate: string;
     diagnosis: string;
+    status: string;
+    appointmentDate: string;
 }
 export declare const getCustomAdaptiveCardPatient: (patient: IPatient) => import("botframework-schema").Attachment;

@@ -9,7 +9,7 @@
         "bloodType": "O-",
         "admissionDate": "2019-01-09",
         "diagnosis": "Lymphocyte depleted Hodgkin lymphoma, intra-abdominal lymph nodes",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "10-Sep-2018"
     },
     {
@@ -23,7 +23,7 @@
         "bloodType": "A+",
         "admissionDate": "2019-05-28",
         "diagnosis": "Military operations involving fragments from weapons",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "10-Aug-2018"
     },
     {
@@ -37,7 +37,7 @@
         "bloodType": "AB+",
         "admissionDate": "2018-07-03",
         "diagnosis": "Varicose veins of lower extremities with both ulcer and inflammation",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "16-Jan-2019"
     },
     {
@@ -51,7 +51,7 @@
         "bloodType": "B+",
         "admissionDate": "2019-06-22",
         "diagnosis": "Traumatic amputation at level between knee and ankle",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "16-Mar-2019"
     },
     {
@@ -65,7 +65,7 @@
         "bloodType": "O+",
         "admissionDate": "2018-09-19",
         "diagnosis": "Maxillary fracture, unspecified side, initial encounter for open fracture",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "11-May-2019"
     },
     {
@@ -79,7 +79,7 @@
         "bloodType": "B+",
         "admissionDate": "2019-01-25",
         "diagnosis": "Nondisplaced fracture of medial malleolus of right tibia, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with routine healing",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "13-Sep-2018"
     },
     {
@@ -93,7 +93,7 @@
         "bloodType": "A+",
         "admissionDate": "2019-05-29",
         "diagnosis": "Laceration without foreign body of left elbow, subsequent encounter",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "05-Oct-2018"
     },
     {
@@ -107,7 +107,7 @@
         "bloodType": "AB-",
         "admissionDate": "2019-05-29",
         "diagnosis": "Malignant neoplasm of round ligament",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "22-Aug-2018"
     },
     {
@@ -121,7 +121,7 @@
         "bloodType": "O+",
         "admissionDate": "2018-09-17",
         "diagnosis": "Intraoperative hemorrhage and hematoma of eye and adnexa complicating an ophthalmic procedure, bilateral",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "22-Jun-2019"
     },
     {
@@ -135,7 +135,7 @@
         "bloodType": "AB+",
         "admissionDate": "2019-05-04",
         "diagnosis": "Nondisplaced fracture of medial condyle of left tibia, initial encounter for open fracture type I or II",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "24-Jun-2019"
     },
     {
@@ -149,7 +149,7 @@
         "bloodType": "O-",
         "admissionDate": "2018-11-29",
         "diagnosis": "Stress fracture, humerus",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "05-Dec-2018"
     },
     {
@@ -163,7 +163,7 @@
         "bloodType": "B-",
         "admissionDate": "2018-11-08",
         "diagnosis": "Food in pharynx causing other injury",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "05-Jul-2018"
     },
     {
@@ -177,7 +177,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-05-26",
         "diagnosis": "Injury of ulnar nerve at forearm level, left arm, sequela",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "08-May-2019"
     },
     {
@@ -191,7 +191,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-02-25",
         "diagnosis": "Unspecified fracture of head of left femur, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with malunion",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "08-Sep-2018"
     },
     {
@@ -205,7 +205,7 @@
         "bloodType": "O+",
         "admissionDate": "2018-12-22",
         "diagnosis": "Military operations involving other forms of conventional warfare, military personnel, sequela",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "22-Feb-2019"
     },
     {
@@ -219,7 +219,7 @@
         "bloodType": "B-",
         "admissionDate": "2018-11-06",
         "diagnosis": "Salter-Harris Type IV physeal fracture of phalanx of right toe, subsequent encounter for fracture with malunion",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "09-Jul-2018"
     },
     {
@@ -233,7 +233,7 @@
         "bloodType": "AB+",
         "admissionDate": "2018-12-02",
         "diagnosis": "Displaced fracture of body of hamate [unciform] bone, right wrist",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "01-Dec-2018"
     },
     {
@@ -247,7 +247,7 @@
         "bloodType": "AB-",
         "admissionDate": "2018-11-09",
         "diagnosis": "Unequal limb length (acquired), unspecified humerus",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "19-Oct-2018"
     },
     {
@@ -261,7 +261,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-03-09",
         "diagnosis": "Underdosing of cocaine, sequela",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "07-Feb-2019"
     },
     {
@@ -275,7 +275,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-02-01",
         "diagnosis": "Separation of muscle (nontraumatic), shoulder",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "10-Nov-2018"
     },
     {
@@ -289,7 +289,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-06-22",
         "diagnosis": "Other fracture of upper and lower end of right fibula, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with routine healing",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "01-Sep-2018"
     },
     {
@@ -303,7 +303,7 @@
         "bloodType": "A-",
         "admissionDate": "2019-04-02",
         "diagnosis": "Underdosing of emetics, sequela",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "11-Aug-2018"
     },
     {
@@ -317,7 +317,7 @@
         "bloodType": "A+",
         "admissionDate": "2018-10-25",
         "diagnosis": "Pyoderma",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "11-Sep-2018"
     },
     {
@@ -331,7 +331,7 @@
         "bloodType": "AB-",
         "admissionDate": "2019-03-19",
         "diagnosis": "Arthropathy following intestinal bypass, vertebrae",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "01-Dec-2018"
     },
     {
@@ -345,7 +345,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-05-18",
         "diagnosis": "Unspecified open wound of right shoulder, subsequent encounter",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "24-May-2019"
     },
     {
@@ -359,7 +359,7 @@
         "bloodType": "B+",
         "admissionDate": "2018-08-01",
         "diagnosis": "War operations involving unarmed hand to hand combat",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "07-Oct-2018"
     },
     {
@@ -373,7 +373,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-04-24",
         "diagnosis": "Corrosions of other internal organs",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "28-Jun-2018"
     },
     {
@@ -387,7 +387,7 @@
         "bloodType": "AB+",
         "admissionDate": "2019-05-31",
         "diagnosis": "Partial traumatic amputation at level between unspecified shoulder and elbow, initial encounter",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "26-Mar-2019"
     },
     {
@@ -401,7 +401,7 @@
         "bloodType": "A-",
         "admissionDate": "2018-09-12",
         "diagnosis": "Type 2 fracture of sacrum, initial encounter for open fracture",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "21-Aug-2018"
     },
     {
@@ -415,7 +415,7 @@
         "bloodType": "AB-",
         "admissionDate": "2018-07-09",
         "diagnosis": "Other specified injury of other blood vessels at ankle and foot level, unspecified leg, initial encounter",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "18-Jun-2019"
     },
     {
@@ -429,7 +429,7 @@
         "bloodType": "A-",
         "admissionDate": "2018-11-02",
         "diagnosis": "Collapsed vertebra, not elsewhere classified, sacral and sacrococcygeal region, subsequent encounter for fracture with delayed healing",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "26-Aug-2018"
     },
     {
@@ -443,7 +443,7 @@
         "bloodType": "A-",
         "admissionDate": "2018-08-16",
         "diagnosis": "Unspecified fracture of unspecified acetabulum, sequela",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "04-Apr-2019"
     },
     {
@@ -457,7 +457,7 @@
         "bloodType": "B+",
         "admissionDate": "2018-11-20",
         "diagnosis": "Superficial foreign body of unspecified ear, sequela",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "16-Jun-2019"
     },
     {
@@ -471,7 +471,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-06-03",
         "diagnosis": "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "17-Nov-2018"
     },
     {
@@ -485,7 +485,7 @@
         "bloodType": "A+",
         "admissionDate": "2018-07-12",
         "diagnosis": "Displaced oblique fracture of shaft of unspecified tibia, subsequent encounter for open fracture type I or II with nonunion",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "15-Aug-2018"
     },
     {
@@ -499,7 +499,7 @@
         "bloodType": "A+",
         "admissionDate": "2019-02-21",
         "diagnosis": "Unspecified injury of heart, unspecified with or without hemopericardium, sequela",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "06-May-2019"
     },
     {
@@ -513,7 +513,7 @@
         "bloodType": "AB-",
         "admissionDate": "2019-05-08",
         "diagnosis": "Maternal care for other isoimmunization, second trimester, fetus 2",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "27-Dec-2018"
     },
     {
@@ -527,7 +527,7 @@
         "bloodType": "AB-",
         "admissionDate": "2019-06-02",
         "diagnosis": "Ectopic testis",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "09-May-2019"
     },
     {
@@ -541,7 +541,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-04-23",
         "diagnosis": "Monteggia's fracture of unspecified ulna, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with delayed healing",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "02-Dec-2018"
     },
     {
@@ -555,7 +555,7 @@
         "bloodType": "B+",
         "admissionDate": "2019-03-26",
         "diagnosis": "Family history of malignant neoplasm of urinary tract",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "18-May-2019"
     },
     {
@@ -569,7 +569,7 @@
         "bloodType": "A+",
         "admissionDate": "2018-09-11",
         "diagnosis": "Fracture of base of skull, unspecified side, initial encounter for open fracture",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "01-Jun-2019"
     },
     {
@@ -583,7 +583,7 @@
         "bloodType": "A+",
         "admissionDate": "2019-01-09",
         "diagnosis": "Glider (nonpowered) fire injuring occupant, initial encounter",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "09-Oct-2018"
     },
     {
@@ -597,7 +597,7 @@
         "bloodType": "A-",
         "admissionDate": "2019-06-11",
         "diagnosis": "Other injury of other urinary and pelvic organ, initial encounter",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "31-Aug-2018"
     },
     {
@@ -611,7 +611,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-05-08",
         "diagnosis": "Nondisplaced comminuted fracture of shaft of unspecified femur, subsequent encounter for closed fracture with routine healing",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "17-Dec-2018"
     },
     {
@@ -625,7 +625,7 @@
         "bloodType": "O-",
         "admissionDate": "2018-09-07",
         "diagnosis": "Other fracture of second metacarpal bone, right hand, subsequent encounter for fracture with nonunion",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "21-Jul-2018"
     },
     {
@@ -639,7 +639,7 @@
         "bloodType": "AB+",
         "admissionDate": "2018-09-26",
         "diagnosis": "Foreign body in other and multiple parts of external eye",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "13-Feb-2019"
     },
     {
@@ -653,7 +653,7 @@
         "bloodType": "A-",
         "admissionDate": "2019-02-18",
         "diagnosis": "Cystic meniscus, other medial meniscus, left knee",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "25-Jun-2019"
     },
     {
@@ -667,7 +667,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-05-20",
         "diagnosis": "Type 2 diabetes mellitus with hyperosmolarity",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "09-Jan-2019"
     },
     {
@@ -681,7 +681,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-06-02",
         "diagnosis": "Nondisplaced segmental fracture of shaft of radius, unspecified arm, subsequent encounter for open fracture type I or II with malunion",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "17-Nov-2018"
     },
     {
@@ -695,7 +695,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-01-14",
         "diagnosis": "Poisoning by, adverse effect of and underdosing of angiotensin-converting-enzyme inhibitors",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "14-Jun-2019"
     },
     {
@@ -709,7 +709,7 @@
         "bloodType": "O-",
         "admissionDate": "2018-08-26",
         "diagnosis": "Laceration without foreign body of right shoulder, sequela",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "26-May-2019"
     },
     {
@@ -723,7 +723,7 @@
         "bloodType": "O+",
         "admissionDate": "2018-10-31",
         "diagnosis": "Pulmonary sporotrichosis",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "25-Oct-2018"
     },
     {
@@ -737,7 +737,7 @@
         "bloodType": "A+",
         "admissionDate": "2019-04-21",
         "diagnosis": "Intermittent monocular esotropia",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "31-Jul-2018"
     },
     {
@@ -751,7 +751,7 @@
         "bloodType": "B-",
         "admissionDate": "2018-11-05",
         "diagnosis": "Intrauterine synechiae",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "24-Dec-2018"
     },
     {
@@ -765,7 +765,7 @@
         "bloodType": "AB+",
         "admissionDate": "2019-03-30",
         "diagnosis": "Conductive and sensorineural hearing loss with restricted hearing on the contralateral side",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "02-Nov-2018"
     },
     {
@@ -779,7 +779,7 @@
         "bloodType": "AB-",
         "admissionDate": "2019-01-01",
         "diagnosis": "Military operations involving combat using blunt or piercing object",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "14-Jun-2019"
     },
     {
@@ -793,7 +793,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-06-22",
         "diagnosis": "Unstable burst fracture of second lumbar vertebra, initial encounter for closed fracture",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "08-May-2019"
     },
     {
@@ -807,7 +807,7 @@
         "bloodType": "AB-",
         "admissionDate": "2018-07-22",
         "diagnosis": "Staphylococcal arthritis, right wrist",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "12-Aug-2018"
     },
     {
@@ -821,7 +821,7 @@
         "bloodType": "AB-",
         "admissionDate": "2019-01-21",
         "diagnosis": "Other fall on same level due to collision with another person",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "22-Jul-2018"
     },
     {
@@ -835,7 +835,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-01-23",
         "diagnosis": "Toxic effect of other halogen derivatives of aromatic hydrocarbons, accidental (unintentional), initial encounter",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "20-Feb-2019"
     },
     {
@@ -849,7 +849,7 @@
         "bloodType": "AB-",
         "admissionDate": "2018-09-28",
         "diagnosis": "Displaced midcervical fracture of right femur, subsequent encounter for open fracture type I or II with nonunion",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "09-Nov-2018"
     },
     {
@@ -863,7 +863,7 @@
         "bloodType": "A+",
         "admissionDate": "2018-12-15",
         "diagnosis": "Unspecified injury of other blood vessels of thorax, right side, initial encounter",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "31-Jan-2019"
     },
     {
@@ -877,7 +877,7 @@
         "bloodType": "A+",
         "admissionDate": "2019-06-21",
         "diagnosis": "Abnormal results of other function studies of eye",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "28-Feb-2019"
     },
     {
@@ -891,7 +891,7 @@
         "bloodType": "B+",
         "admissionDate": "2018-07-06",
         "diagnosis": "Corrosion of first degree of multiple sites of right lower limb, except ankle and foot, initial encounter",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "18-May-2019"
     },
     {
@@ -905,7 +905,7 @@
         "bloodType": "B+",
         "admissionDate": "2018-12-11",
         "diagnosis": "Poisoning by unspecified topical agent, assault",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "08-Aug-2018"
     },
     {
@@ -919,7 +919,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-02-18",
         "diagnosis": "Displaced transverse fracture of unspecified acetabulum, subsequent encounter for fracture with nonunion",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "09-Oct-2018"
     },
     {
@@ -933,7 +933,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-05-17",
         "diagnosis": "Secondary malignant neoplasm of left adrenal gland",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "16-Aug-2018"
     },
     {
@@ -947,7 +947,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-06-11",
         "diagnosis": "Toxic effect of copper and its compounds, intentional self-harm, subsequent encounter",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "04-May-2019"
     },
     {
@@ -961,7 +961,7 @@
         "bloodType": "AB+",
         "admissionDate": "2018-07-03",
         "diagnosis": "Unspecified dislocation of left little finger, subsequent encounter",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "06-Apr-2019"
     },
     {
@@ -975,7 +975,7 @@
         "bloodType": "A+",
         "admissionDate": "2019-02-25",
         "diagnosis": "Maternal care for other known or suspected poor fetal growth, third trimester, fetus 5",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "03-Jan-2019"
     },
     {
@@ -989,7 +989,7 @@
         "bloodType": "B+",
         "admissionDate": "2018-09-15",
         "diagnosis": "Nondisplaced other extraarticular fracture of right calcaneus, sequela",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "01-Mar-2019"
     },
     {
@@ -1003,7 +1003,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-02-23",
         "diagnosis": "Poisoning by anthelminthics, undetermined",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "24-Jul-2018"
     },
     {
@@ -1017,7 +1017,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-05-03",
         "diagnosis": "Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting left dominant side",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "17-Mar-2019"
     },
     {
@@ -1031,7 +1031,7 @@
         "bloodType": "A-",
         "admissionDate": "2018-09-15",
         "diagnosis": "Symptomatic postprocedural ovarian failure",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "08-May-2019"
     },
     {
@@ -1045,7 +1045,7 @@
         "bloodType": "O-",
         "admissionDate": "2018-12-31",
         "diagnosis": "Crushing injury of unspecified hand",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "16-Apr-2019"
     },
     {
@@ -1059,7 +1059,7 @@
         "bloodType": "AB-",
         "admissionDate": "2019-02-09",
         "diagnosis": "Laceration without foreign body of other part of head",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "10-Aug-2018"
     },
     {
@@ -1073,7 +1073,7 @@
         "bloodType": "AB+",
         "admissionDate": "2019-05-04",
         "diagnosis": "Lateral dislocation of proximal end of tibia, left knee, subsequent encounter",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "30-Jan-2019"
     },
     {
@@ -1087,7 +1087,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-01-13",
         "diagnosis": "Other chronic osteomyelitis, tibia and fibula",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "21-Apr-2019"
     },
     {
@@ -1101,7 +1101,7 @@
         "bloodType": "A-",
         "admissionDate": "2019-01-08",
         "diagnosis": "Displaced fracture of shaft of third metacarpal bone, left hand, initial encounter for closed fracture",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "17-Jun-2019"
     },
     {
@@ -1115,7 +1115,7 @@
         "bloodType": "AB+",
         "admissionDate": "2018-08-19",
         "diagnosis": "Displaced transverse fracture of shaft of left femur, subsequent encounter for closed fracture with nonunion",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "28-Nov-2018"
     },
     {
@@ -1129,7 +1129,7 @@
         "bloodType": "AB+",
         "admissionDate": "2018-12-13",
         "diagnosis": "Ophthalmia nodosa, right eye",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "11-Dec-2018"
     },
     {
@@ -1143,7 +1143,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-02-25",
         "diagnosis": "Placental infarction, unspecified trimester",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "24-May-2019"
     },
     {
@@ -1157,7 +1157,7 @@
         "bloodType": "A-",
         "admissionDate": "2018-07-21",
         "diagnosis": "Other maternal infectious and parasitic diseases complicating childbirth",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "29-May-2019"
     },
     {
@@ -1171,7 +1171,7 @@
         "bloodType": "B+",
         "admissionDate": "2019-03-18",
         "diagnosis": "Angioplasty status",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "11-Jun-2019"
     },
     {
@@ -1185,7 +1185,7 @@
         "bloodType": "O+",
         "admissionDate": "2019-04-04",
         "diagnosis": "Toxic effect of nitroglycerin and other nitric acids and esters, undetermined, subsequent encounter",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "05-Mar-2019"
     },
     {
@@ -1199,7 +1199,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-04-10",
         "diagnosis": "Unspecified injury of unspecified tibial artery",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "22-Feb-2019"
     },
     {
@@ -1213,7 +1213,7 @@
         "bloodType": "O-",
         "admissionDate": "2019-06-23",
         "diagnosis": "Burn of first degree of forehead and cheek, subsequent encounter",
-        "status ": "Deceased",
+        "status": "Deceased",
         "appointmentDate": "27-Aug-2018"
     },
     {
@@ -1227,7 +1227,7 @@
         "bloodType": "B-",
         "admissionDate": "2018-10-25",
         "diagnosis": "Laceration of superficial vein at shoulder and upper arm level, unspecified arm, subsequent encounter",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "10-Jul-2018"
     },
     {
@@ -1241,7 +1241,7 @@
         "bloodType": "B-",
         "admissionDate": "2019-05-10",
         "diagnosis": "Type III traumatic spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with nonunion",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "22-Dec-2018"
     },
     {
@@ -1255,7 +1255,7 @@
         "bloodType": "O+",
         "admissionDate": "2018-10-28",
         "diagnosis": "Corrosion of second degree of multiple right fingers (nail), including thumb, initial encounter",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "31-Dec-2018"
     },
     {
@@ -1269,7 +1269,7 @@
         "bloodType": "O-",
         "admissionDate": "2019-04-28",
         "diagnosis": "Nondisplaced spiral fracture of shaft of unspecified tibia, subsequent encounter for open fracture type I or II with routine healing",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "16-Apr-2019"
     },
     {
@@ -1283,7 +1283,7 @@
         "bloodType": "A-",
         "admissionDate": "2018-10-06",
         "diagnosis": "Passenger of ambulance or fire engine injured in nontraffic accident, subsequent encounter",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "17-May-2019"
     },
     {
@@ -1297,7 +1297,7 @@
         "bloodType": "AB-",
         "admissionDate": "2018-09-23",
         "diagnosis": "Nondisplaced articular fracture of head of left femur, sequela",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "06-Oct-2018"
     },
     {
@@ -1311,7 +1311,7 @@
         "bloodType": "A+",
         "admissionDate": "2019-03-13",
         "diagnosis": "Unspecified occupant of pick-up truck or van injured in collision with heavy transport vehicle or bus in nontraffic accident, sequela",
-        "status ": "Discharged",
+        "status": "Discharged",
         "appointmentDate": "10-Feb-2019"
     },
     {
@@ -1325,7 +1325,7 @@
         "bloodType": "AB-",
         "admissionDate": "2018-12-26",
         "diagnosis": "Other juvenile arthritis, elbow",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "12-Dec-2018"
     },
     {
@@ -1339,7 +1339,7 @@
         "bloodType": "B+",
         "admissionDate": "2019-06-01",
         "diagnosis": "Contusion of right thumb with damage to nail, initial encounter",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "02-May-2019"
     },
     {
@@ -1353,7 +1353,7 @@
         "bloodType": "A-",
         "admissionDate": "2019-04-02",
         "diagnosis": "Blister (nonthermal), left ankle",
-        "status ": "Stable",
+        "status": "Stable",
         "appointmentDate": "08-Jun-2019"
     },
     {
@@ -1367,7 +1367,7 @@
         "bloodType": "O+",
         "admissionDate": "2018-12-21",
         "diagnosis": "Other specified fracture of left acetabulum, subsequent encounter for fracture with nonunion",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "23-Jul-2018"
     },
     {
@@ -1381,7 +1381,7 @@
         "bloodType": "O+",
         "admissionDate": "2018-12-19",
         "diagnosis": "Breakdown (mechanical) of other gastrointestinal prosthetic devices, implants and grafts",
-        "status ": "Critical",
+        "status": "Critical",
         "appointmentDate": "23-May-2019"
     },
     {
@@ -1395,7 +1395,7 @@
         "bloodType": "B-",
         "admissionDate": "2018-12-01",
         "diagnosis": "Dislocation of tarsal joint of left foot, initial encounter",
-        "status ": "Triage",
+        "status": "Triage",
         "appointmentDate": "13-Mar-2019"
     }
 ]
