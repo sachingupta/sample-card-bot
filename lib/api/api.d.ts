@@ -1,7 +1,22 @@
 import { Attachment } from 'botbuilder';
 import * as teams from 'botbuilder-teams';
-export declare const handleQuery: (searchtext: string) => any[];
-export declare const createPreviewList: (items: any[], heroCard: any, heroCard2: any) => any[];
+import { IPatient } from './adaptivecard';
+export declare const handleQuery: (searchtext: string) => {
+    preview: Attachment;
+    contentType: string;
+    contentUrl?: string;
+    content?: any;
+    name?: string;
+    thumbnailUrl?: string;
+}[];
+export declare const createPreviewList: (items: IPatient[]) => {
+    preview: Attachment;
+    contentType: string;
+    contentUrl?: string;
+    content?: any;
+    name?: string;
+    thumbnailUrl?: string;
+}[];
 export declare const getCustomAdaptiveCard: (body: string) => Attachment;
 export declare const getCustomAdaptiveCard2: (body: string) => Attachment;
 export declare const getAdaptiveCard: () => Attachment;
