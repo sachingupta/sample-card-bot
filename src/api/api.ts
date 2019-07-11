@@ -30,7 +30,7 @@ export const createPreviewList = (items: Array<IPatient>) => {
         const adaptiveCard = getCustomAdaptiveCardPatient(item);
         const heroCard = CardFactory.heroCard(`${item.firstName} ${item.lastName}`, item.diagnosis, [`https://robohash.org/${item.firstName.toLowerCase()}.png?set=set5`]);
 
-        heroCard.content.subtitle = item.appointmentDate;
+        heroCard.content.subTitle = item.appointmentDate;
         return ({
             ...adaptiveCard,
             preview: heroCard,
