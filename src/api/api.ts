@@ -38,7 +38,7 @@ export const createPreviewList = (items: Array<IPatient>) => {
         return ({
             ...adaptiveCard,
             preview: heroCard
-        })
+        } as Attachment)
     })
     return out;
 }
