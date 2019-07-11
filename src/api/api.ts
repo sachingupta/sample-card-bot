@@ -28,17 +28,13 @@ export const handleQuery = (searchtext: string) => {
 export const createPreviewList = (items: Array<IPatient>) => {
     let out = items.map((item: IPatient, index: number) => {
         const adaptiveCard = getCustomAdaptiveCardPatient(item);
-        const heroCard: HeroCard = {
-            title: `${item.firstName} ${item.lastName}`,
-            subtitle: item.appointmentDate,
-            text: item.diagnosis,
-            images: [{url: `https://robohash.org/${item.firstName.toLowerCase()}.png?set=set5`}]
-        } as HeroCard
+        const heroCard = CardFactory.heroCard(`${item.firstName} ${item.lastName}`, item.diagnosis, [`https://robohash.org/${item.firstName.toLowerCase()}.png?set=set5`]);
 
+        heroCard.content.subtitle = item.appointmentDate;
         return ({
             ...adaptiveCard,
-            preview: heroCard
-        } as Attachment)
+            preview: heroCard,
+        })
     })
     return out;
 }
