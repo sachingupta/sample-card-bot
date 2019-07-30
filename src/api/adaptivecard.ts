@@ -105,69 +105,74 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
       "type": "Action.ShowCard",
       "title": "Page Doctor",
       "card": {
-          "type": "AdaptiveCard",
-          "body": [
-              {
-                  "type": "Input.Text",
-                  "placeholder": "Add a message",
-                  "id": "doctorPage"
-              }
-          ],
-          "actions": [
-              {
-                "data": {
-                  "done": true
-                },
-                  "type": "Action.Submit",
-                  "title": "Send"
-              }
-          ]
-      }
-  },
-  {
-    "type": "Action.ShowCard",
-    "title": "Set Appointment",
-    "card": {
         "type": "AdaptiveCard",
         "body": [
-            {
-                "type": "Input.Date",
-                "id": "appointmentDate"
-            }
+          {
+            "type": "Input.Text",
+            "placeholder": "Add a message",
+            "id": "doctorPage"
+          }
         ],
         "actions": [
-            {
-              "data": {
-                "done": true
-              },
-                "type": "Action.Submit",
-                "title": "Submit"
-            }
+          {
+            "data": {
+              "done": true
+            },
+            "type": "Action.Submit",
+            "title": "Send"
+          }
         ]
-    }
-},
-  {
+      }
+    },
+    {
+      "type": "Action.ShowCard",
+      "title": "Set Appointment",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "Input.Date",
+            "id": "appointmentDate"
+          }
+        ],
+        "actions": [
+          {
+            "data": {
+              "done": true
+            },
+            "type": "Action.Submit",
+            "title": "Submit"
+          }
+        ]
+      }
+    },
+    {
       "type": "Action.ShowCard",
       "title": "Update Status",
       "card": {
-          "type": "AdaptiveCard",
-          "body": [
-              {
-                  "type": "Input.Text",
-                  "id": "status"
-              }
-          ],
-          "actions": [
-              {
-                "data": {
-                  "done": true
-                },
-                  "type": "Action.Submit",
-                  "title": "Submit"
-              }
-          ]
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "Input.Text",
+            "id": "status"
+          }
+        ],
+        "actions": [
+          {
+            "data": {
+              "done": true
+            },
+            "type": "Action.Submit",
+            "title": "Submit"
+          }
+        ]
       }
-  }
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "Hospital Website",
+      "url": "https://www.uwmedicine.org/locations/uw-medical-center"
+    }
   ];
 
   const body = `[
@@ -256,10 +261,10 @@ export const getCustomAdaptiveCardPatient = (patient: IPatient) => {
   ]`
 
   let adaptiveCard = teams.TeamsFactory.adaptiveCard({
-      version: '1.0.0',
-      type: 'AdaptiveCard',
-      body: JSON.parse(body),
-      actions: actions as any
+    version: '1.0.0',
+    type: 'AdaptiveCard',
+    body: JSON.parse(body),
+    actions: actions as any
   });
   return adaptiveCard;
 }
